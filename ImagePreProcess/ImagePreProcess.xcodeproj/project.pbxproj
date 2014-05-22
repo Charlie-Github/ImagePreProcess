@@ -14,7 +14,7 @@
 		3AB3883A192E990100A39BBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38839192E990100A39BBA /* main.m */; };
 		3AB3883E192E990100A39BBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3883D192E990100A39BBA /* AppDelegate.m */; };
 		3AB38841192E990100A39BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3883F192E990100A39BBA /* Main.storyboard */; };
-		3AB38844192E990100A39BBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38843192E990100A39BBA /* ViewController.m */; };
+		3AB38844192E990100A39BBA /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38843192E990100A39BBA /* ViewController.mm */; };
 		3AB38846192E990100A39BBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB38845192E990100A39BBA /* Images.xcassets */; };
 		3AB3884D192E990100A39BBA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB3884C192E990100A39BBA /* XCTest.framework */; };
 		3AB3884E192E990100A39BBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB3882D192E990100A39BBA /* Foundation.framework */; };
@@ -23,7 +23,7 @@
 		3AB38859192E990100A39BBA /* ImagePreProcessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38858192E990100A39BBA /* ImagePreProcessTests.m */; };
 		3AB38864192E997000A39BBA /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38863192E997000A39BBA /* UIImage+OpenCV.mm */; };
 		3AB38867192E998700A39BBA /* ImagePreProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38866192E998700A39BBA /* ImagePreProcessor.mm */; };
-		3AB38869192E99D500A39BBA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB38868192E99D500A39BBA /* opencv2.framework */; };
+		3AB3886B192E9BAC00A39BBA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB3886A192E9BAC00A39BBA /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 		3AB3883D192E990100A39BBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3AB38840192E990100A39BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AB38842192E990100A39BBA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3AB38843192E990100A39BBA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3AB38843192E990100A39BBA /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		3AB38845192E990100A39BBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AB3884B192E990100A39BBA /* ImagePreProcessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagePreProcessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB3884C192E990100A39BBA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -60,7 +60,7 @@
 		3AB38863192E997000A39BBA /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
 		3AB38865192E998700A39BBA /* ImagePreProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePreProcessor.h; sourceTree = "<group>"; };
 		3AB38866192E998700A39BBA /* ImagePreProcessor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImagePreProcessor.mm; sourceTree = "<group>"; };
-		3AB38868192E99D500A39BBA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ImagePreProcess/opencv2.framework; sourceTree = "<group>"; };
+		3AB3886A192E9BAC00A39BBA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ImagePreProcess/opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB38869192E99D500A39BBA /* opencv2.framework in Frameworks */,
+				3AB3886B192E9BAC00A39BBA /* opencv2.framework in Frameworks */,
 				3AB38830192E990100A39BBA /* CoreGraphics.framework in Frameworks */,
 				3AB38832192E990100A39BBA /* UIKit.framework in Frameworks */,
 				3AB3882E192E990100A39BBA /* Foundation.framework in Frameworks */,
@@ -110,7 +110,7 @@
 		3AB3882C192E990100A39BBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3AB38868192E99D500A39BBA /* opencv2.framework */,
+				3AB3886A192E9BAC00A39BBA /* opencv2.framework */,
 				3AB3882D192E990100A39BBA /* Foundation.framework */,
 				3AB3882F192E990100A39BBA /* CoreGraphics.framework */,
 				3AB38831192E990100A39BBA /* UIKit.framework */,
@@ -130,7 +130,7 @@
 				3AB3883D192E990100A39BBA /* AppDelegate.m */,
 				3AB3883F192E990100A39BBA /* Main.storyboard */,
 				3AB38842192E990100A39BBA /* ViewController.h */,
-				3AB38843192E990100A39BBA /* ViewController.m */,
+				3AB38843192E990100A39BBA /* ViewController.mm */,
 				3AB38845192E990100A39BBA /* Images.xcassets */,
 				3AB38834192E990100A39BBA /* Supporting Files */,
 			);
@@ -264,7 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB38864192E997000A39BBA /* UIImage+OpenCV.mm in Sources */,
-				3AB38844192E990100A39BBA /* ViewController.m in Sources */,
+				3AB38844192E990100A39BBA /* ViewController.mm in Sources */,
 				3AB3883E192E990100A39BBA /* AppDelegate.m in Sources */,
 				3AB38867192E998700A39BBA /* ImagePreProcessor.mm in Sources */,
 				3AB3883A192E990100A39BBA /* main.m in Sources */,
