@@ -21,6 +21,9 @@
 		3AB3884F192E990100A39BBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB38831192E990100A39BBA /* UIKit.framework */; };
 		3AB38857192E990100A39BBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AB38855192E990100A39BBA /* InfoPlist.strings */; };
 		3AB38859192E990100A39BBA /* ImagePreProcessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38858192E990100A39BBA /* ImagePreProcessTests.m */; };
+		3AB38864192E997000A39BBA /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38863192E997000A39BBA /* UIImage+OpenCV.mm */; };
+		3AB38867192E998700A39BBA /* ImagePreProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AB38866192E998700A39BBA /* ImagePreProcessor.mm */; };
+		3AB38869192E99D500A39BBA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB38868192E99D500A39BBA /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		3AB38854192E990100A39BBA /* ImagePreProcessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImagePreProcessTests-Info.plist"; sourceTree = "<group>"; };
 		3AB38856192E990100A39BBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3AB38858192E990100A39BBA /* ImagePreProcessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePreProcessTests.m; sourceTree = "<group>"; };
+		3AB38862192E997000A39BBA /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		3AB38863192E997000A39BBA /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		3AB38865192E998700A39BBA /* ImagePreProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePreProcessor.h; sourceTree = "<group>"; };
+		3AB38866192E998700A39BBA /* ImagePreProcessor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImagePreProcessor.mm; sourceTree = "<group>"; };
+		3AB38868192E99D500A39BBA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ImagePreProcess/opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB38869192E99D500A39BBA /* opencv2.framework in Frameworks */,
 				3AB38830192E990100A39BBA /* CoreGraphics.framework in Frameworks */,
 				3AB38832192E990100A39BBA /* UIKit.framework in Frameworks */,
 				3AB3882E192E990100A39BBA /* Foundation.framework in Frameworks */,
@@ -101,6 +110,7 @@
 		3AB3882C192E990100A39BBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AB38868192E99D500A39BBA /* opencv2.framework */,
 				3AB3882D192E990100A39BBA /* Foundation.framework */,
 				3AB3882F192E990100A39BBA /* CoreGraphics.framework */,
 				3AB38831192E990100A39BBA /* UIKit.framework */,
@@ -112,6 +122,10 @@
 		3AB38833192E990100A39BBA /* ImagePreProcess */ = {
 			isa = PBXGroup;
 			children = (
+				3AB38865192E998700A39BBA /* ImagePreProcessor.h */,
+				3AB38866192E998700A39BBA /* ImagePreProcessor.mm */,
+				3AB38862192E997000A39BBA /* UIImage+OpenCV.h */,
+				3AB38863192E997000A39BBA /* UIImage+OpenCV.mm */,
 				3AB3883C192E990100A39BBA /* AppDelegate.h */,
 				3AB3883D192E990100A39BBA /* AppDelegate.m */,
 				3AB3883F192E990100A39BBA /* Main.storyboard */,
@@ -249,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB38864192E997000A39BBA /* UIImage+OpenCV.mm in Sources */,
 				3AB38844192E990100A39BBA /* ViewController.m in Sources */,
 				3AB3883E192E990100A39BBA /* AppDelegate.m in Sources */,
+				3AB38867192E998700A39BBA /* ImagePreProcessor.mm in Sources */,
 				3AB3883A192E990100A39BBA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +392,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImagePreProcess",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImagePreProcess/ImagePreProcess-Prefix.pch";
 				INFOPLIST_FILE = "ImagePreProcess/ImagePreProcess-Info.plist";
@@ -389,6 +409,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImagePreProcess",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImagePreProcess/ImagePreProcess-Prefix.pch";
 				INFOPLIST_FILE = "ImagePreProcess/ImagePreProcess-Info.plist";
