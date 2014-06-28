@@ -41,10 +41,12 @@
     
     cv::Mat tempMat = [img CVGrayscaleMat];
 	
-	cv::Mat grayFrame, output;
+	cv::Mat output;
 	cv::Size size;
 	size.height = 3;
 	size.width = 3;
+    
+    //fang -new line
     
     
     img = [UIImage imageWithCVMat:output]; //putting the image in an UIImage format
